@@ -16,8 +16,9 @@ namespace CabDriver
             //Calculate Fare double
             double fare = invoiceGenerator.CalculateFare(2.0, 5);
             Console.WriteLine($"Fare: {fare}");
+            InvoiceSummery invoiceTotalFare = new InvoiceSummery(3, 5);
+            Console.WriteLine(invoiceTotalFare);
             Console.ReadLine();
-
         }
     }
 }

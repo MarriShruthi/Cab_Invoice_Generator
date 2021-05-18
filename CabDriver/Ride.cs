@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CabDriver
 {
-    class Ride
+    public class Ride
     {
         //Creating Variables
         public double distance;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CabDriver
 {
-    class RideRepository
+    public class RideRepository
     {
         //Dictionary to store UserId and Rides int List.
         Dictionary<string, List<Ride>> userRides = null;
@@ -52,11 +52,10 @@ namespace CabDriver
             {
                 return this.userRides[userId].ToArray();
             }
-            catch (CabException)
+            catch (Exception)
             {
-                throw new CabException(CabException.ExceptionType.INVALID_USER_ID, "Invalid User id");
+                throw new CabException(CabException.ExceptionType.INVALID_USER_ID, "Invalid UserId");
             }
         }
     }
 }
-   
